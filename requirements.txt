@@ -1,0 +1,8 @@
+selenium
+webdriver-manager
+beautifulsoup4
+pandas
+plotly
+streamlit
+wordcloud
+matplotlib
