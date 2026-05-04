@@ -39,7 +39,7 @@ BASE_URL = "https://www.keejob.com/offres-emploi/?page={}"
 OUTPUT_PATH = "data/raw_keejob_jobs.csv"
 
 # How many pages to scrape (each page ~15 jobs)
-MAX_PAGES = 20
+MAX_PAGES = 50
 
 # Seconds to wait between page requests (be polite to the server)
 PAGE_DELAY = 4

@@ -6,3 +6,4 @@ plotly
 streamlit
 wordcloud
 matplotlibs
+streamlit

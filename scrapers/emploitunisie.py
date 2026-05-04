@@ -56,7 +56,7 @@ HOME_URL = "https://www.emploitunisie.com/"
 OUTPUT_PATH = "data/raw_emploitunisie_jobs.csv"
 
 # Number of paginated pages to scrape (each ~15 jobs)
-MAX_PAGES = 5
+MAX_PAGES = 30
 
 # Polite delay between page requests (seconds)
 PAGE_DELAY = 2

@@ -63,18 +63,16 @@ def parse_fr_date(value: str) -> str:
 
 
 def extract_location_from_title(title: str) -> str:
-    """
-    EmploiTunisie embeds the location at the end of the title
-    when it isn't available as a separate field, e.g.:
-      'Designer Graphique Junior - Ariana- la Soukra'  →  'Ariana- la Soukra'
-    """
-    match = re.search(r"\s*[-–]\s*(.+)$", title)
+    if pd.isna(title):
+        return None
+    match = re.search(r"\s*[-–]\s*(.+)$", str(title))
     return match.group(1).strip() if match else None
 
 
 def remove_location_from_title(title: str) -> str:
-    """Strip the trailing ' - <location>' suffix from an EmploiTunisie title."""
-    return re.sub(r"\s*[-–]\s*.+$", "", title).strip()
+    if pd.isna(title):
+        return title
+    return re.sub(r"\s*[-–]\s*.+$", "", str(title)).strip()
 
 
 def normalize_keejob_location(location: str) -> str:
